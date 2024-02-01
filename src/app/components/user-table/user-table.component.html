@@ -1,0 +1,78 @@
+<br>
+<br>
+<br>
+
+<div class="container">
+  <h1 style="font-family: 'FedExSansLt';">Angular Table example</h1>
+  <h4 style="font-family: 'FedExSansLt';">This example show how to retrieve data from API - backend and show in the table</h4>
+  <hr />
+  <br>
+
+  <div class="example-container ">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Search Customer</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Search columns" #input>
+    </mat-form-field>
+
+    <div fxLayout="row" fxLayoutAlign="end-center">
+      <div fxFlex> </div>
+      <div fxFlex> </div>
+      <div fxFlex> </div>
+      <div fxFlex> </div>
+      <div fxFlex> </div>
+      <div fxFlex>
+        <div>
+          <!-- <button mat-raised-button color="primary" (click)="openProfileView(valueTable)">
+            <mat-icon>person_add </mat-icon> Add a new profile
+          </button> -->
+        </div>
+      </div>
+    </div>
+
+
+    <br>
+    <br>
+
+    <!-- <table mat-table [dataSource]="dataSource"  > -->
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort #empTbSort="matSort">
+>
+
+      <!-- Column -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> <a (click)="cellClicked(element)" [routerLink]="['/profiles']"
+            routerLinkActive="router-link-active">{{element.id}} </a></mat-cell>
+      </ng-container>
+
+
+      <!-- Column -->
+      <ng-container matColumnDef="customer_name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.customer_name}} </mat-cell>
+      </ng-container>
+
+      <!-- Column -->
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+      </ng-container>
+
+      <!-- Column -->
+      <ng-container matColumnDef="extra1">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Extra </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.extra1}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+    </table>
+    <mat-paginator #paginator [pageSizeOptions]="[5,25,50]" showFirstLastButtons>
+    </mat-paginator>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>

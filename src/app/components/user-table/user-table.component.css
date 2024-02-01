@@ -1,0 +1,84 @@
+/*TABLE**/
+
+.mat-table {
+    overflow: auto;
+    max-height: 500px;
+    /* background-color: #ffff; */
+    color: #ffffff;
+      /* border-bottom: 2px solid #000; */
+    }
+  
+    .mat-header-cell {
+      background: #4D148C;
+      color: #ffff;
+    }
+
+     
+    .mat-cell {
+      background: #fff;
+      color: #000;
+    }
+  
+    .mat-row:hover .mat-cell {
+      background-color: #8E8E83;
+      color: #fff;
+    }
+  
+  
+    /*INPUTS*/
+    mat-label {
+      color: #79787a;
+    }
+  
+    mat-input {
+      color: #4D148C;
+    }
+    
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: #a5a4a1;
+    }
+    
+  
+    /*BUTTONS*/
+    .mat-raised-button {
+      color: #f0fff3;
+      background-color: #4D148C;
+    }
+  
+ .mat-form-field {
+      font-size: 14px;
+      width: 100%;
+color: #4D148C;
+    }
+    
+     
+  
+     /*MAT PAGINATOR*/
+     mat-paginator {
+      background-color: #4D148C;
+      
+    }
+  
+    ::ng-deep .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+      background: #4D148C;
+      color: #f0fff3;
+    }
+    ::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+      background-color: #4D148C;
+    }
+  
+    /* ::ng-deep .mat-form-field.mat-focused.mat-primary .mat-select-arrow { color: #4D148C; } */
+  
+    /* .mat-form-field-appearance-outline .mat-form-field-outline { color: black; } */
+  
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: #a5a4a1;
+     
+  }
+  
+   mat-label normal state style
+  ::ng-deep .mat-form-field-label {
+      color: rgba(0,0,0,.6)!important;
+     
+  }
+  

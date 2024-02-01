@@ -1,0 +1,170 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <h1 style="font-family: 'FedExSansLt';">Customer Profile </h1>
+  <h4 style="font-family: 'FedExSansLt';">Incoming Data Monitor</h4>
+  <hr />
+  <br>
+
+
+  <form class="form">
+
+    <div fxLayout="row" fxLayoutAlign="end-center">
+
+      <div fxFlex>
+        <mat-form-field appearance="outline">
+
+          <mat-select id="profile" (selectionChange)="changeClient($event.value)"
+            [(ngModel)]="cprofileForm.customer_name" [name]='cprofileForm.customer_name'
+            [ngModelOptions]="{standalone: true}">
+            <mat-option value="" disabled>Choose profile</mat-option>
+            <mat-option *ngFor="let country of dataSelect; let i = index" [value]="country.id">
+              {{ country.id }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+
+
+      <div fxFlex> <br>
+        <h6 style="font-family: 'FedExSansLt';"><span>Selected ID : {{cprofileForm.dynamiccnpj}} </span></h6>
+      </div>
+
+      <div fxFlex> </div>
+      <div fxFlex> </div>
+      <div fxFlex>
+        <div>
+          <button mat-raised-button color="primary" (click)="addRecord()">
+            <mat-icon>person_add </mat-icon> Add a new filial
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="border: 2px solid #F2F2F2; margin-top: 10px; padding: 5px;">
+      <mat-tab-group>
+        <mat-tab label="General Information">
+          <br>
+          <h4 style="font-family: 'FedExSansLt';">Contact </h4>
+          <div fxLayout.lt-sm="row">
+
+
+            <mat-form-field fxFlex appearance="outline">
+              <mat-label>Customer name</mat-label>
+              <input matInput [(ngModel)]='cprofileForm.customer_name' [name]='cprofileForm.customer_name'
+                [ngModelOptions]="{standalone: true}">
+
+            </mat-form-field>
+          </div>
+
+
+          <mat-form-field appearance="outline">
+            <mat-label>Customer contact name</mat-label>
+            <input matInput [ngModel]="cprofileForm.customer_contact_name" [name]='cprofileForm.customer_contact_name'
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <br>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Phone number</mat-label>
+            <input matInput [ngModel]="cprofileForm.phone_number" [name]='cprofileForm.phone_number'
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <br>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Secondary phone number </mat-label>
+            <input matInput [ngModel]="cprofileForm.second_phone_number" [name]='cprofileForm.second_phone_number'
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <br>
+          <br>
+          <h4 style="font-family: 'FedExSansLt';">Address </h4>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Street line1 </mat-label>
+            <input matInput [ngModel]="cprofileForm.street" [name]='cprofileForm.street'
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <br>
+          <br>
+
+        </mat-tab>
+
+        <mat-tab label="  Shipping Information">
+          <ng-template mat-tab-label>
+            <div fxLayout="column" fxLayoutAling="none none" fxLayoutGap="10px">
+              <span>
+                <mat-icon>https</mat-icon> Shipping Information
+              </span>
+            </div>
+          </ng-template>
+
+          <br>
+
+          <h4 style="font-family: 'FedExSansLt';">Web services information </h4>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Sender account </mat-label>
+            <input matInput [ngModel]="cprofileForm.sender_account" [name]='cprofileForm.sender_account'
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <br>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Payment account </mat-label>
+            <input matInput [ngModel]="cprofileForm.paymnet_account" [name]='cprofileForm.paymnet_account'
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <br>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Shipment credential </mat-label>
+            <input matInput [ngModel]="cprofileForm.shipment_credential" [name]='cprofileForm.shipment_credential'
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <br>
+          <br>
+
+          <h4 style="font-family: 'FedExSansLt';">Service information </h4>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Prefered service </mat-label>
+            <input matInput [ngModel]="cprofileForm.prefered_serivce" [name]='cprofileForm.prefered_serivce'
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <br>
+          <mat-form-field appearance="outline">
+            <mat-label>Secondary service </mat-label>
+            <input matInput [ngModel]="cprofileForm.second_serivce" [name]='cprofileForm.second_serivce'
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <br>
+          <mat-form-field appearance="outline">
+            <mat-label>Prefered packaging </mat-label>
+            <input matInput [ngModel]="cprofileForm.prefered_packaging" [name]='cprofileForm.prefered_packaging'
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </mat-tab>
+
+        <mat-tab label="Printing Information"> Content 3 </mat-tab>
+        <mat-tab label="Interface Information"> Content 3 </mat-tab>
+      </mat-tab-group>
+
+
+    </div>
+  </form>

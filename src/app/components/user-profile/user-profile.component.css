@@ -1,0 +1,175 @@
+/** No CSS for this example 
+
+/*TABLE**/
+
+.mat-table {
+    overflow: auto;
+    max-height: 500px;
+    /* background-color: #ffff; */
+    color: #000;
+      /* border-bottom: 2px solid #000; */
+    }
+  
+    .mat-header-cell {
+      background: #4D148C;
+      color: #1f48a0;
+    }
+    
+    .mat-cell {
+      background: #2e8ac0;
+      color: #000;
+    }
+  
+    .mat-row:hover .mat-cell {
+      background-color: #8E8E83;
+      color: #bd1f1f;
+    }
+  
+  
+    /*INPUTS*/
+    mat-label {
+      color: #79787a;
+    }
+  
+    mat-input {
+      color: #4D148C;
+      background-color: #d4d41e;
+
+    }
+    
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: #d1a31a;
+    }
+    
+  
+    /*BUTTONS*/
+    .mat-raised-button {
+      color: #21cf44;
+      background-color: #4D148C;
+    }
+  
+    /* .mat-form-field {
+      font-size: 14px;
+      width: 100%;
+    }
+    
+     */
+  
+     /*MAT PAGINATOR*/
+     mat-paginator {
+      background-color: #4D148C;
+      
+    }
+  
+    ::ng-deep .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+      background: #4D148C;
+      color: #f0fff3;
+    }
+    ::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+      background-color: #4D148C;
+    }
+  
+    /* ::ng-deep .mat-form-field.mat-focused.mat-primary .mat-select-arrow { color: #4D148C; } */
+  
+    /* .mat-form-field-appearance-outline .mat-form-field-outline { color: black; } */
+  
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: #a5a4a1;
+     
+  }
+  
+   mat-label normal state style
+  ::ng-deep .mat-form-field-label {
+      color: rgba(0,0,0,.6)!important;
+     
+  }
+  
+  
+  /* /deep/ */
+   .mat-paginator-icon{
+   background-color: yellow;
+  }
+  
+  /* /deep/  */
+  .mat-select-panel {
+     background-color: #4D148c;
+  }
+  
+  /* /deep/  */
+  .mat-form-field-infix{
+      background-color: #1caf48;
+  }
+  
+  /* /deep/ */
+  .mat-select{
+    background-color:  #4D148c;
+  }
+  
+  /* /deep/  */
+  .mat-select-value{
+    color: rgb(207, 29, 29);
+  }
+  
+  /* /deep/ */
+   .mat-form-field-type-mat-select .mat-form-field-label {
+   color: rgb(168, 39, 39);
+  }
+  
+  .mat-select-panel {
+    background: red;
+    
+  }
+  
+  ::ng-deep .mat-select-content{
+    width:2000px;
+    background-color: red;
+    font-size: 10px;   
+  }
+  
+  
+  */
+  
+  .mat-select-panel{
+    position: absolute;
+    top: 32px;
+    left: 4px;
+    min-width: calc(100% + 22px) !important;
+    border-radius: 0px !important;
+    border: 1px solid blue;
+    border-top-style: none;
+  }
+  
+  .mat-form-field-appearance-outline .mat-form-field-outline-start{
+    border-radius: 0px !important;
+    border: 1px solid blue !important;
+    border-right-style: none !important;
+  }
+  
+  .mat-form-field-appearance-outline .mat-form-field-outline-end{
+    border-radius: 0px !important;
+    border: 1px solid blue !important;
+    border-left-style: none !important;
+  }
+  
+  .mat-select-panel ng-animating {
+    visibility: hidden;
+  }
+  
+  /** No CSS for this example */
+  ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label {
+    color:#000;
+    background-color: #fff;
+    }
+  
+    
+    ::ng-deep .mat-tab-list .mat-tab-labels {
+  
+    background-color: #fff;
+    color: #4D148C;
+    }
+    
+    .mat-select-content{
+      background-color: red;
+      font-size: 1.5em;
+  }
+    
